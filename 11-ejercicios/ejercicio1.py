@@ -27,6 +27,9 @@ numeros.sort()
 print(f"Lista ordenada {numeros}")
 print(f"Longitud de la lista = {len(numeros)}")
 
-numero = int(input("Escriba el numero que desea buscar: "))
-busqueda = numeros.index(numero)
-print(f"El numero buscado existe en la lista, es el indice {busqueda}")
+try:
+    numero = int(input("Escriba el numero que desea buscar: "))
+    busqueda = numeros.index(numero)
+    print(f"El numero buscado existe en la lista, es el indice {busqueda}")
+except:
+    print("El número no esta en la lista!")
