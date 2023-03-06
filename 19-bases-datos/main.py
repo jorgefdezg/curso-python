@@ -5,18 +5,19 @@ database = mysql.connector.connect(
     host="localhost",
     user="root",
     passwd="",
-    database="master_python"
+    database = "master_python"
 )
 
 #Cursor
 cursor = database.cursor(buffered=True)
-"""
+
 #Crear base de datos
 cursor.execute("CREATE DATABASE IF NOT EXISTS master_python")
 
 cursor.execute("SHOW DATABASES")
-"""
+
 #Crear tablas
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS vehiculos(
 id int(10) auto_increment not null,
@@ -40,7 +41,7 @@ coches = [
     ("Mercedes","Clase C",35000)
 ]
 
-#cursor.executemany("INSERT INTO vehiculos VALUES(null,%s,%s,%s)",coches)
+cursor.executemany("INSERT INTO vehiculos VALUES(null,%s,%s,%s)",coches)
 
 database.commit()
 

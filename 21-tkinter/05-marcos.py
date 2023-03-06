@@ -2,7 +2,7 @@ from tkinter import *
 
 ventana = Tk()
 
-ventana.title("Marcos | Master en PYthon")
+ventana.title("Marcos | Master en Python")
 ventana.geometry("700x700")
 
 marco_padre = Frame(ventana, width=250,height=250)
@@ -15,6 +15,15 @@ marco.config(
     relief=SOLID
 )
 marco.pack(side=LEFT,anchor=SW)
+marco.pack_propagate(False)
+
+texto = Label(marco, text="Primer marco")
+texto.config(
+    bg = "red",
+    fg = "white",
+    font=("Arial",18)
+)
+texto.pack(anchor=CENTER, fill=Y,expand=YES)
 
 marco = Frame(marco_padre, width=250,height=250)
 marco.config(
