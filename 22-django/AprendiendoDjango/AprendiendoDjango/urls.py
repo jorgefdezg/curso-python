@@ -16,6 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+#Importar app con mis vistas
+import miapp.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',miapp.views.index,name="index"),
+    path('inicio/',miapp.views.index,name="inicio"),
+    path('hola-mundo/',miapp.views.hola_mundo,name="hola_mundo"),
+    path('pagina-pruebas/',miapp.views.pagina ,name="pagina"),
+    path('pagina-pruebas/<int:redirigir>',miapp.views.pagina ,name="pagina_entero"),
+    path('contacto/', miapp.views.contacto,name="contacto"),
+    path('contacto/<str:nombre>', miapp.views.contacto,name="contacto"),
+    path('contacto/<str:nombre>/<str:apellidos>', miapp.views.contacto,name="contacto")
 ]
