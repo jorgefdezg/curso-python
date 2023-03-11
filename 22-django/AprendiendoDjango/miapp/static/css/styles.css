@@ -1,4 +1,81 @@
+/*Estilos generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif,Arial, Helvetica;
+    text-decoration: none;
+}
+
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: red;
+    background-color: #f2f2f2;
+}
+
+/*Estilos cabecera*/
+header{
+    width: 1212px;
+    height: 140px;
+    background-color: #23282b;
+    margin: 0px auto;
+}
+
+/**/
+
+#logotipo{
+    width: 35%;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+#logotipo img{
+    display: block;
+    float: left;
+    width: 60px;
+    margin-top: 20px;
+}
+
+#logotipo h1{
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: #2ba977;
+}
+
+/*Estilos barra de navegacion*/
+nav{
+    width: 1250px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #1b1e1f;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+}
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #d1d4d6;
+}
+
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 5px #444444 inset;
+    color: white;
+    transition: all 300ms;
 }
