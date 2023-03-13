@@ -51,7 +51,10 @@ def pagina(request, redirigir = 0):
         return redirect('contacto',nombre="Jorge",apellidos="Fernandez")
 
 
-    return render(request, 'pagina.html')
+    return render(request, 'pagina.html', {
+        'texto': 'Este es mi texto',
+        'lista': ['uno','dos','tres']
+    })
 
 def contacto(request, nombre = "", apellidos = ""):
     html = ""
