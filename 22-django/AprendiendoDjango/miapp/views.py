@@ -27,7 +27,18 @@ layout = """
 
 def index(request):
 
-    return render(request,'index.html')
+    year = 2023
+    hasta = range(year,2051)
+    nombre = "Jorge Fernandez Gonzalez"
+    lenguajes = ['JavaScript','Python','PHP','C']
+
+    return render(request,'index.html',{
+        'title': 'Inicio',
+        'mi_variable': 'Soy un dato que esta en la vista',
+        'nombre': nombre,
+        'lenguajes': lenguajes,
+        'years': hasta
+    })
 
 
 def hola_mundo(request):

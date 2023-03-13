@@ -27,30 +27,39 @@
     <nav>
         <ul>
             <li>
-                <a href="/inicio">Inicio</a>
+                <a href="{% url 'inicio'%}">Inicio</a>
             </li>
             <li>
-                <a href="/hola-mundo">Hola Mundo!</a>
+                <a href="{%url 'hola_mundo' %}">Hola Mundo!</a>
             </li>
             <li>
-                <a href="/pagina-pruebas">Pagina de pruebas</a>
+                <a href="{%url 'pagina' %}">Pagina de pruebas</a>
             </li>
             <li>
-                <a href="/contacto">Contacto</a>
+                <a href={%url 'contacto' nombre='Jorge' apellidos='Fernandez'%}>Contacto</a>
             </li>
         </ul>
     </nav>
 
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
 
     <div id="content">
-        <h2 class="title">Titulo de pruebas</h2>
-        {%block content%}
-        <strong>Contenido del bloque original!!!</strong>
-        {%endblock%}
+
+        <div class="box">
+            {%block content%}
+            <strong>Contenido del bloque original!!!</strong>
+            {%endblock%}
+        </div>
+
     </div>
 
     <footer>
-        Master en Python, Jorge Fernandez
+        Master en Python, Jorge Fernandez - {%now "d/m/Y h:m:s"%}
     </footer>
 </body>
 
