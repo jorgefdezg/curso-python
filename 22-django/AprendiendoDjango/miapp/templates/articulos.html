@@ -6,6 +6,14 @@
 
 <h1 class="title">Listado de articulos</h1>
 
+{% if messages %}
+    {% for message in messages %}
+        <div class="message">
+            {{message}}
+        </div>
+    {%endfor%}
+{%endif%}
+
     <ul>
         {% for articulo in articulos %}
             <li>

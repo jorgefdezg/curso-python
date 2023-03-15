@@ -6,12 +6,16 @@
     text-decoration: none;
 }
 
-.box p, .box h2, .box h3, .box ul{
+.box p,
+.box h2,
+.box h3,
+.box ul{
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.box ul,.box ol{
+.box ul,
+.box ol{
     margin-left: 20px;
     margin-bottom: 10px;
 }
@@ -138,6 +142,47 @@ nav ul li a:hover{
     margin: 0 auto;
 }
 
+.box form{
+    width: 40%;
+
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.box form input [type="text"],
+.box form textarea{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box form select{
+    width: 100px;
+    padding: 5px;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid black;
+    color: white;
+    transition: 300ms all;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #1e704f;
+}
+
 .title{
     color: #444;
     letter-spacing: 1px;
@@ -156,4 +201,16 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: 0px 0px 20px gray;
+}
+
+.rojo{
+    color: red;
+}
+
+.message{
+    padding: 20px;
+    background: green;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
 }

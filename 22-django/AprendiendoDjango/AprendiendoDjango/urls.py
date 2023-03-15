@@ -33,5 +33,8 @@ urlpatterns = [
     path('articulo/',miapp.views.articulo,name="articulo"),
     path('editar-articulo/<int:id>',miapp.views.editar_articulo,name="editar"),
     path('articulos/',miapp.views.articulos,name="articulos"),
-    path('borrar-articulo/<int:id>', miapp.views.borrar_articulos,name="borrar")
+    path('borrar-articulo/<int:id>', miapp.views.borrar_articulos,name="borrar"),
+    path('save-article/', miapp.views.save_article,name="save"),
+    path('create-article/',miapp.views.create_article,name="create"),
+    path('create-full-article/',miapp.views.create_full_article,name="create_full"),
 ]
