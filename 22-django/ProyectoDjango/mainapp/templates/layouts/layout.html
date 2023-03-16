@@ -1,0 +1,66 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {%block title%}
+
+        {%endblock%}
+         | Jorge Fernandez
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet", type="text/css" href="{% static 'css/styles.css'%}">
+</head>
+
+<body>
+
+    <!--Cabecera de la pagina-->
+    <header>
+        <div id="logotipo">
+            <!--Logo Django-->
+            <img src="{% static 'images/logo.png' %}"/>
+            <h1>Proyecto con Django</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">Inicio</a>
+            </li>
+            <li>
+                {% for page in pages %}
+                    <li>
+                        <a href='{% url 'page' page.2 %}'>{{page.1}}</a>
+                    </li>
+                {% endfor %}
+            </li>
+        </ul>
+    </nav>
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+
+    <div id="content">
+
+        <div class="box">
+            {%block content%}
+            <strong>Contenido del bloque original!!!</strong>
+            {%endblock%}
+        </div>
+
+    </div>
+
+    <footer>
+        Master en Python, Jorge Fernandez - {%now "d/m/Y h:m:s"%}
+    </footer>
+</body>
+
+</html>
