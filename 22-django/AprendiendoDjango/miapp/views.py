@@ -171,7 +171,7 @@ def editar_articulo(request, id):
 
 def articulos(request):
 
-    articulos = Article.objects.all().order_by('-id')
+    articulos = Article.objects.filter(public=True).order_by('-id')
     # articulos = Article.objects.order_by('id')[0:1]
 
     # articulos = Article.objects.filter(id__lte=10, title__contains="2")
