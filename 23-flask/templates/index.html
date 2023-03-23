@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Inicio
+{%endblock%}
+
+{% block content %}
+
+    <h1> Página de Inicio</h1>
+
+    {%include 'includes/edad.html'%}
+    {%include 'includes/personas.html'%}
+
+
+    {# Esto se utiliza para hacer un comentario en Flask #}
+
+{%endblock%}

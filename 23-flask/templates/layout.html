@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% block title %} | Aprendiendo Flask con Victor Robles {% endblock %}</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    </head>
+    <body>
+
+    <!--Cabecera de la pagina-->
+    <header>
+        <div id="logotipo">
+            <!--Logo Django-->
+            <img src="{{url_for('static',filename='imagenes/flask.png')}}"/>
+            <h1>Aprendiendo Flask</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/"> Inicio </a>
+            </li>
+            <li>
+                <a href="{{url_for('informacion')}}"> Informacion </a>
+            </li>
+            <li>
+                <a href="{{url_for('contacto')}}"> Contacto </a>
+            </li>
+            <li>
+                <a href="{{url_for('lenguajes')}}"> Lenguajes de programación </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+
+    <div id="content">
+
+        <div class="box">
+            {%block content%}
+            <strong>Contenido del bloque original!!!</strong>
+            {%endblock%}
+        </div>
+
+    </div>
+
+    <footer>
+        Master en Python, Jorge Fernandez - {{now.day}}/{{now.month}}/{{now.year}}
+    </footer>
+
+    </body>
+
+</html>
